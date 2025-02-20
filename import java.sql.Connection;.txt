@@ -1,0 +1,29 @@
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class SoftCoded{
+public static void main(String [] args) throws SQLExeption, ClassNotFoundException{
+
+Class.forName("com.mysql.jdbc.Driver");
+
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advance","root","root");
+
+Scanner s = new Scanner(System.in);
+ 
+System.out.print("Enter id :");
+int id = s.nextInt();
+
+System.out.print("Enter name :");
+String name = s.next();
+
+System.out.print("Enter age :");
+ 
+ 
+Statement stmt = con.createStatement();
+
+
+
+
